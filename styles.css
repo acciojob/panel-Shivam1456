@@ -1,1 +1,62 @@
 /*  your css code here. If applicable */
+*{
+      box-sizing: border-box;
+}
+
+body {
+
+      font-family: 'Muli', sans-serif;
+	  margin: 0;
+	  display: flex; 
+	  align-items: center;
+	  justify-content: center;
+	  min-height: 100vh;
+	  overflow:hidden;
+}
+
+.panel {
+	   display: flex;
+	   width:90vw;
+}
+
+.panel{
+
+        background-size: cover;  
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    height:80vh;
+	    border-radius:50px;
+	    flex:0.5;
+	    position:relative;
+	    transition:flex 0.5 ease-in;
+	    color:#fff;
+	    cursor:pointer;
+	    margin:10px;
+}
+
+.panel h3{
+	    position:absolute;
+	    botton:20pc;
+	    left:20px;
+	    opacity:0;
+}
+
+.panel.action{
+	     flex:5;
+}
+
+.panel.active h3{
+	     opacity:1;
+	     transition:opacity 0.4s ease-in 0.4s;
+}
+
+@media(max-width:480px){
+	.panel{
+		width:100vw;
+	}
+
+	.panel:nth-of-type(4),.panel:nth-of-type(5){
+		display:name;
+	}
+}
+			
