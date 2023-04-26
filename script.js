@@ -1,20 +1,13 @@
-//your JS code here. If required.
 const panels = document.querySelectorAll('.panel');
 
-panels.forEach (panel => {
+for (let i = 0; i < panels.length; i++) {
+	panels[i].addEventListener('click', function() {
+		for (let j = 0; j < panels.length; j++) {
+			if (i !== j) {
+				panels[j].classList.remove('expanded');
+			}
+		}
 
-panel.addEventListener('click', () => { 
-
-removeActiveclasses();
-	panel.classList.add('active');
-
-    })
-
-})
-
-function removeActiveClasses(){
-  panels.forEach (panel => {
-panel.classList.remove('active');
-
-    })
+		panels[i].classList.toggle('expanded');
+	});
 }
